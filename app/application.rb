@@ -9,6 +9,7 @@ class Application
 
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
+      binding.pry
       if items.include?(item_name) == true
         resp.write "$3.42"
       else
