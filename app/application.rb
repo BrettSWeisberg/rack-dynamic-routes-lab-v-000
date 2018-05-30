@@ -1,6 +1,6 @@
 require 'pry'
 
-end
+
 class Application
   @@items = []
   def call(env)
