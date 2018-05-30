@@ -11,7 +11,7 @@ class Application
 
         item_name = req.path.split("/items/").last
         return_value = @@items.find{|i| i.name == item_name}
-        binding.pry
+        
         if return_value != nil
         resp.write "#{return_value.name}, #{return_value.price}"
       else
