@@ -1,5 +1,5 @@
 require 'pry'
-  
+
 end
 class Application
   @@items = []
