@@ -10,8 +10,10 @@ class Application
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
       binding.pry
-      if items.include?(item_name) == true
-        resp.write "$3.42"
+
+    return_value = @@items.find{|i| i.name == item_name}
+
+        resp.write "#{return_value.name, return_value.price }"
       else
       resp.write "Item not found"
       resp.status = 400
